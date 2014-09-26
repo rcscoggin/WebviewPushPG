@@ -15,7 +15,8 @@
         <script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
           <script type="text/javascript">
 		var pushNotification;
-	// <![CDATA[
+
+		console.log("start main script");
   		document.addEventListener("deviceready",function() { 
   			pushNotification = window.plugins.pushNotification;
       			
@@ -94,7 +95,7 @@
   				}
 			}
 
-	// ]]>
+		console.log("Finish main script");
 	</script>
     </head>
     <body>
@@ -111,6 +112,6 @@
     <script type="text/javascript">
         app.initialize();
     </script>
-    <iframe src='http://www.google.com' id='iframe'></iframe>
+    <iframe src='http://www.yahoo.com' id='iframe'></iframe>
     </body>
 </html>
