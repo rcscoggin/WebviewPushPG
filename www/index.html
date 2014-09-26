@@ -20,8 +20,11 @@
   		document.addEventListener("deviceready",function() { 
   			pushNotification = window.plugins.pushNotification;
       			
-      		$("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
-			if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+      			$("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
+  		}
+  		console.log("Finish main script");
+  	</script>
+		<!-- 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
     				pushNotification.register(
     					successHandler,
     					errorHandler,
@@ -93,10 +96,7 @@
         					$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
     						break;
   				}
-			}
-
-		console.log("Finish main script");
-	</script>
+			} -->
     </head>
     <body>
   
