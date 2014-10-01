@@ -16,13 +16,13 @@
           <script type="text/javascript">
 		// var pushNotification;
 
-		console.log("start main script");
+		console.log("start head script");
   		document.addEventListener("deviceready",function() { 
   			// pushNotification = window.plugins.pushNotification;
       			
       			// $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
   		}
-  		console.log("Finish main script");
+  		console.log("End head script");
   	</script>
 		<!-- 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
     				pushNotification.register(
@@ -110,8 +110,9 @@
 	</div>
 
     <script type="text/javascript">
+    	console.log("start main script");
         app.initialize();
+        console.log("End main script");
     </script>
-    <iframe src='' id='iframe'></iframe>
     </body>
 </html>
