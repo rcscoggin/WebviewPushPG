@@ -22,8 +22,8 @@
       			$("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
       			console.log("end deviceready");
   		}, false); // doc event listener
-  	</script>
-		<!-- 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+  	
+		 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
     				pushNotification.register(
     					successHandler,
     					errorHandler,
@@ -32,13 +32,13 @@
         					"ecb":"onNotification"
     					});
 			} else {
-    				alert('Push says not Android');
+    				console.log("Push says not Android");
 			}
 			function successHandler (result) {
-    				alert('push register result = ' + result);
+    				console.log('push register result = ' + result);
 			}
       			function errorHandler (error) {
-    				alert('push register error = ' + error);
+    				console.log('push register error = ' + error);
 			}
 
 			function onNotification(e) {
@@ -50,7 +50,7 @@
         					if ( e.regid.length > 0 )
         					{
             						$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
-	            						alert("regID = " + e.regid);
+	            						console.log("regID = " + e.regid);
         					}
     						break;
 
@@ -95,7 +95,8 @@
         					$("#app-status-ul").append('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
     						break;
   				}
-			} -->
+			}
+	</script>
     </head>
     <body>
   
