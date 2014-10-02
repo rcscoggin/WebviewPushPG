@@ -17,9 +17,9 @@
 
   		document.addEventListener("deviceready",function() { 
   			console.log("start deviceready");
-  			// pushNotification = window.plugins.pushNotification;
+  			pushNotification = window.plugins.pushNotification;
       			
-      			// $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
+      			$("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
       			console.log("end deviceready");
   		}, false); // doc event listener
   	</script>
