@@ -24,6 +24,7 @@
   		}, false); // doc event listener
   	
 		 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+    				console.log("Registering device");
     				pushNotification.register(
     					successHandler,
     					errorHandler,
@@ -31,6 +32,7 @@
         					"senderID":"294771091766",
         					"ecb":"onNotification"
     					});
+    				console.log("Registration sent");
 			} else {
     				console.log("Push says not Android");
 			}
