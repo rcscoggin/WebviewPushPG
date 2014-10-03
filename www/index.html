@@ -20,8 +20,6 @@
   			pushNotification = window.plugins.pushNotification;
       			
       			$("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
-      			console.log("end deviceready");
-  		}, false); // doc event listener
   	
 		 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
     				console.log("Registering device");
@@ -98,6 +96,8 @@
     						break;
   				}
 			}
+			console.log("end deviceready");
+  		}, false); // doc event listener
 	</script>
     </head>
     <body>
