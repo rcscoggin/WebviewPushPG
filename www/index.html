@@ -21,7 +21,24 @@
       			
       			$("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
       			
-  			function successHandler (result) {
+		 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+    				console.log("Registering device");
+    				pushNotification.register(
+    					successHandler,
+    					errorHandler,
+    					{
+        					"senderID":"294771091766",
+        					"ecb":"onNotification()"
+    					});
+    				console.log("Registration sent");
+			} else {
+    				console.log("Push says not Android");
+			}
+			
+			console.log("end deviceready");
+  		}, false); // doc event listener
+  		
+  		 	function successHandler (result) {
     				console.log('push register result = ' + result);
 			}
 			
@@ -30,6 +47,7 @@
 			}
 
 			function onNotification(e) {
+
     				$("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
 
     				switch( e.event )
@@ -84,23 +102,6 @@
     						break;
   				}
 			}
-			
-		 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
-    				console.log("Registering device");
-    				pushNotification.register(
-    					successHandler,
-    					errorHandler,
-    					{
-        					"senderID":"294771091766",
-        					"ecb":"onNotification"
-    					});
-    				console.log("Registration sent");
-			} else {
-    				console.log("Push says not Android");
-			}
-			
-			console.log("end deviceready");
-  		}, false); // doc event listener
 	</script>
     </head>
     <body>
