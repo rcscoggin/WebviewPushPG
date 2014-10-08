@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Gift Card - Deposit Check</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- iphone -->
+<link rel="stylesheet" href="sv3/media/iphone.css"  type="text/css" media="only screen and (min-width:0px) and (max-width:320px)">
+<!-- iPad -->
+<link rel="stylesheet" href="sv3/media/ipad.css"  type="text/css" media="only screen and (min-width:700px) and (max-width:2100px)">
+<!-- BB,SAMSUNG,MOTO -->
+<link rel="stylesheet" href="sv3/media/bb_sam_moto.css"  type="text/css" media="only screen and (min-width:320px) and (max-width:480px)">
+<!-- General Style -->
+<link rel="stylesheet" href="sv3/media/style.css" type="text/css" />
+<!-- Mobo UI Style -->
+<link rel="stylesheet" href="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.css" type="text/css"/>
+<noscript>
+<style type="text/css" media="all">
+@import url("sv3/media/sv3_noscript.css");
+</style>
+</noscript>
+</head><body>
+<div data-role="page">
+  <header>
+    <div id="hdrContainer">
+      <div id="hdr"> <a href="javascript: history.go(-1);" class="btn-hdr ui-shadow"><span><img src="sv3/media/back1.png" width="9" height="15"  alt="back" /></span></a> </div>
+    </div>
+    <div data-role="header" data-theme="b"> 
+      <!--	<h1>I'm a header</h1>	-->
+      <div class="navigation">
+        <div class="home"><a data-ajax="false" href="index.htm"><img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/home.png" width="26" height="26"alt="home"></a></div>
+        <div class="ma"><a data-ajax="false" style="color:#fff; font-weight:normal;" href="account_menu.htm">My Account <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" style="margin:0 0 0 5px;" width="10" height="6" alt="down_arrow"></a></div>
+        <!--<div class="oc"><a style="color:#fff;" href="order_card.htm">Order Cards</a></div>-->
+        <div class="menuu"><a  data-ajax="false" style="color:#fff;" href="primary_menu.htm">Menu <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" width="10" style="margin:0 0 0 3px;" height="6" alt="down_arrow"></a></div>
+        <div class="lout"><a data-ajax="false" style="color:#fff;" href="login.htm">Sign out</a></div>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    
+    <!-- /header --> 
+    
+  </header>
+  <div data-role="content">
+    <div class="mar_bot10">
+      <h1 id="pageTitle">Deposit Check<a data-ajax="false" href="deposit_check_edit.htm" data-theme="a" data-inline="true" class="fl_right">Edit</a></h1>
+      <h2 id="subTitle">- Summary</h2>
+    </div>
+    <div class="content">
+      <div class="mar_bot10">
+        <h3>Speed of Deposit </h3>
+        Within Minutes, 1% of check </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a">
+          <h3> Amount Entered </h3>
+          $45.00 </div>
+        <div class="ui-block-b">
+          <div class="mar_bot10">
+            <h3> Fee </h3>
+            $0.45</div>
+        </div>
+        <div class="ui-block-a">
+          <h3> Deposit To: </h3>
+          Soni’s Prepaid Card</div>
+        <div class="ui-block-b">
+          <div class="mar_bot10">
+            <h3>Email </h3>
+            soni123@soni.com </div>
+        </div>
+      </div>
+      <div> <a href="my_acc_home.htm" data-inline="true" data-theme="a" data-role="button" data-ajax="false">Cancel</a> <a href="deposit_check_conf.htm" data-inline="true" data-theme="a" data-role="button" data-ajax="false">Submit</a> </div>
+    </div>
+  </div>
+  <!-- /content -->
+  
+  <div data-role="footer" class="nav-glyphish-example" data-theme="b">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+      <ul>
+        <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li>
+        <li><a id="about" data-icon="custom" href="about.htm" data-ajax="false"> About</a></li>
+        <!-- <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li> 
+                <li><a id="terms" data-icon="custom" href="terms.htm" data-ajax="false"> Terms</a></li>-->
+        <li><a id="terms" data-icon="custom" href="faq.htm" data-ajax="false"> FAQ</a></li>
+        <li><a id="privacy" data-icon="custom" href="privacy.htm" data-ajax="false"> Privacy</a></li>
+        <li><a id="more_menu" data-icon="custom"  href="add_more_menu.htm" data-ajax="false"> More</a> </li>
+      </ul>
+    </div>
+    <!-- /navbar -->
+    <div class="mar10 f12" align="center"><a href="#" data-ajax="false" style="color:#fff; text-decoration:none; font-weight:normal;">Full Desktop Site</a></div>
+  </div>
+  <!-- /footer --> 
+  <script language="JavaScript" src="sv3/media/sv3.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery-1.6.4.min.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.js" type="text/javascript"></script> 
+  <!-- JS for camera--> 
+  <script>
+    <!-- JS for front check--> 
+	var snap = document.getElementById("front_check_snap");
+snap.onchange=function(e){
+ var file=e.target.files[0];
+ var URL=window.URL|| window.webkitURL;
+ var fileURL=URL.createObjectURL(file);
+ var img= document.getElementById("front_check_photo");
+ img.src=fileURL;
+ URL.revokeObjectURL(fileURL);
+};
+ function front_check(){
+   document.getElementById("front_check_snap").click();
+ }
+ 
+ function sub(obj){
+    var file = obj.value;
+    var fileName = file.split("\\");
+    document.getElementById("front_check").innerHTML = fileName[fileName.length-1];
+    document.myForm.submit();
+    event.preventDefault();
+  }
+  
+    <!-- JS for back check--> 
+  	var snap = document.getElementById("back_check_snap");
+snap.onchange=function(e){
+ var file=e.target.files[0];
+ var URL=window.URL|| window.webkitURL;
+ var fileURL=URL.createObjectURL(file);
+ var img= document.getElementById("back_check_photo");
+ img.src=fileURL;
+ URL.revokeObjectURL(fileURL);
+};
+
+ function back_check(){
+   document.getElementById("back_check_snap").click();
+ }
+ 
+ function sub(obj){
+    var file = obj.value;
+    var fileName = file.split("\\");
+    document.getElementById("back_check").innerHTML = fileName[fileName.length-1];
+    document.myForm.submit();
+    event.preventDefault();
+  }
+</script> 
+  
+  <!--[if IE lt9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]--> 
+</div>
+<!-- /page -->
+
+</body>
+</html>
+<!-- d_mar -->

@@ -1,0 +1,50 @@
+/* this corrects an IE issue with buttons displayed
+	in block mode */
+
+.btnPanel a,
+.btnPanel a:link,
+.btnPanel a:visited {
+	width: 100%;
+}
+
+.btnPanel input,
+.btnPanel input {
+	width: 100%;
+}
+
+.tabs a.off,
+.tabs a.off:link,
+.tabs a.off:visited {
+	width: 100%;
+}
+
+.dataHeader th a,
+.dataHeader th a:link,
+.dataHeader th a:visited {
+	width: 100%;
+}
+
+.pageLinks a,
+.pageLinks a:link,
+.pageLinks a:visited {
+	padding: 0px 6px 0px 0px;
+}
+
+input.dings {
+	padding: 3px 0px 0px 2px;
+	font-size: 12px;
+}
+
+.subTabs a {
+	width: 100%;
+}
+
+#main {
+	width: 100%;
+}
+
+.toolbar .btns a,
+.toolbar .btns a:link,
+.toolbar .btns a:visited {
+	width: 100%;
+}

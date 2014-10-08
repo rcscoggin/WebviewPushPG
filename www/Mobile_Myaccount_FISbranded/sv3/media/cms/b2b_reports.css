@@ -1,0 +1,120 @@
+body {
+	background-color: #FFFFFF;
+	margin: 0px 0px 0px 0px;
+}
+
+.printOnly {
+	display: block;
+}
+
+#receiptHeader {
+	display: block;
+	margin: 0px 0px 20px 10px;
+	text-align: left;
+	border-bottom: 2px solid #000066;
+}
+
+#receiptProgram {
+	float: right;
+	display: block;
+	margin: 20px 0px 0px 0px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #000066;
+}
+
+#receiptTitle {
+	display: block;
+	margin: 0px 0px 20px 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #000066;
+	text-align: center;
+}
+
+#receiptFinePrint {
+	display: block;
+	margin: 0px 0px 20px 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 0.7em;
+	color: #000066;
+	text-align: left;
+}
+
+#reportTitle {
+	display: block;
+	margin: 0px 0px 0px 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #000066;
+	text-align: center;
+}
+
+#reportDate {
+	display: block;
+	margin: 0px 0px 20px 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+}
+
+#header {
+	display: none;
+}
+	
+#footer {
+	display: none;
+}
+
+.modHeader {
+	display: none;
+}
+
+.receiptBox {
+	background-color: #E9EEF3;
+}
+
+.ns4-th {
+	border-top: 1px solid #B3BED8;
+	border-bottom: 1px solid #B3BED8;
+}
+
+.datarow1, .datarow2, .dataTable {
+	background-color: transparent;
+}
+
+.datarow1 td {
+	border-top: 0px solid #E5E2CF;
+	border-bottom: 1px solid #000066;
+}
+
+.datarow2 td {
+	border-top: 0px solid #FFFBE5;
+	border-bottom: 1px solid #000066;
+}
+
+.module {
+	width: 100%;
+	margin: 0px;
+	border: 0px solid #FFFFFF;
+}
+
+#modal .module {
+	width: 100%;
+	margin: 0px;
+	border: 0px solid #FFFFFF;
+	background-color: #FFFFFF;
+}
+
+.moduleNav {
+	display: none;
+}
+
+.modalNav {
+	display: none;
+}

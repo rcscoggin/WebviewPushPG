@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Gift Card - My Account</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- iphone -->
+<link rel="stylesheet" href="sv3/media/iphone.css" type="text/css" media="only screen and (min-width:0px) and (max-width:320px)">
+<!-- iPad -->
+<link rel="stylesheet" href="sv3/media/ipad.css" type="text/css" media="only screen and (min-width:700px) and (max-width:2100px)">
+<!-- BB,SAMSUNG,MOTO -->
+<link rel="stylesheet" href="sv3/media/bb_sam_moto.css" type="text/css" media="only screen and (min-width:320px) and (max-width:480px)">
+<!-- General Style -->
+<link rel="stylesheet" href="sv3/media/style.css" type="text/css" />
+<!-- Mobo UI Style -->
+<link rel="stylesheet" href="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.css" type="text/css"/>
+<noscript>
+<style type="text/css" media="all">
+@import url("sv3/media/sv3_noscript.css");
+</style>
+</noscript>
+</head><body>
+<div data-role="page" data-theme="c">
+  <div data-role="header"> 
+    <!--	<h1>I'm a header</h1>	-->
+    <div id="hdrContainer">
+      <div id="hdr"> <a data-ajax="false" href="javascript: history.go(-1);" class="btn-hdr ui-shadow"><span><img src="sv3/media/back1.png" width="9" height="15"  alt="back" /></span></a> </div>
+    </div>
+    <div class="navigation">
+      <div class="home"><a data-ajax="false" href="index.htm"><img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/home.png" width="26" height="26"alt="home"></a></div>
+      <div class="ma"><a data-ajax="false" style="color:#fff; font-weight:normal;" href="account_menu.htm">My Account <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" style="margin:0 0 0 5px;" width="10" height="6" alt="down_arrow"></a></div>
+      <!--<div class="oc"><a data-ajax="false" style="color:#fff;" href="order_card.htm">Order Cards</a></div>-->
+      <div class="menuu"><a data-ajax="false" style="color:#fff; font-weight:normal;" href="primary_menu.htm">Menu <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" width="10" style="margin:0 0 0 3px;" height="6" alt="down_arrow"></a></div>
+      <div class="lout"><a data-ajax="false" style="color:#fff; font-weight:normal;" href="login.htm">Sign out</a></div>
+    </div>
+    <!-- /navbar --> 
+  </div>
+  <!-- /header -->
+  
+  <div data-role="content">
+    <div class="content">
+      <div class="mar_bot10">
+        <h1 id="pageTitle">My Account</h1>
+        <h2 id="subTitle">- Overview</h2>
+      </div>
+      <div class="boxLabel">Jimmy Smith<a data-ajax="false" href="edit_profile.htm" data-theme="a" data-inline="true" class="fl_right">Edit Profile</a></div>
+      <hr size="1" class="mar_bot10">
+      <div class="width100 mar_bot10">
+        <div class="wid60">
+          <div class="ui-grid-solo">
+            <div class="ui-block-a">
+              <label>Card Number:</label>
+              ...1234</div>
+            <div class="ui-block-a">
+              <label>Status:</label>
+              ACTIVE</div>
+            <div class="ui-block-a">
+              <label>Balance:</label>
+              $450.00</div>
+            <div class="ui-block-a">
+              <label>Exp. Date:</label>
+              06/2015 </div>
+          </div>
+        </div>
+      </div>
+      <form action="#" method="post" name="formTransRange" autocomplete="on" target="transFrame">
+        <label class="boxLabel">Transactions from Last 30 days Starting</label>
+        <div data-type="horizontal" data-role="controlgroup">
+          <select name="month" title="Transaction Search Month" >
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+            <option value="3">Mar</option>
+            <option value="4">Apr</option>
+            <option value="5" selected>May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">Aug</option>
+            <option value="9">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+          </select>
+          <select name="day" title="Transaction Search Day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11" selected>11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <select name="year" title="Transaction Search Year">
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012" selected>2012</option>
+          </select>
+        </div>
+        <div class="mar_bot10"> <a data-ajax="false" href="my_acc_home.htm" data-theme="a" data-role="button" data-inline="true">Go</a> </div>
+      </form>
+      <label class="boxLabel">Transaction Results</label>
+      <hr class="mar_bot10" size="1">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th width="23%">Trans. Date</th>
+            <th width="31%"> Description</th>
+            <th width="23%" class="centered-cell">Local Amount</th>
+            <th width="23%" class="centered-cell">Dest. Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>05/10/2012</td>
+            <td>Purchase - Sunoco</td>
+            <td align="right">(USD 10.00)</td>
+            <td align="right">(SWF 42.00)</td>
+          </tr>
+          <tr>
+            <td>05/10/2012</td>
+            <td>Purchase  - Starbucks</td>
+            <td align="right">(USD 2.00)</td>
+            <td align="right">(SWF 5.00)</td>
+          </tr>
+          <tr>
+            <td>05/10/2012</td>
+            <td>Purchase  - Publix</td>
+            <td align="right">(USD 30.00)</td>
+            <td align="right">(SWF 42.00)</td>
+          </tr>
+          <tr>
+            <td>05/10/2012</td>
+            <td>Purchase  - Starbucks</td>
+            <td align="right">(USD 4.00)</td>
+            <td align="right">(SWF 9.00)</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- /my card ends --> 
+      
+    </div>
+  </div>
+  <!-- /content -->
+  <div data-role="footer" class="nav-glyphish-example" data-theme="b">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+      <ul>
+        <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li>
+        <li><a id="about" data-icon="custom" href="about.htm" data-ajax="false"> About</a></li>
+        <!-- <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li> 
+                <li><a id="terms" data-icon="custom" href="terms.htm" data-ajax="false"> Terms</a></li>-->
+        <li><a id="terms" data-icon="custom" href="faq.htm" data-ajax="false"> FAQ</a></li>
+        <li><a id="privacy" data-icon="custom" href="privacy.htm" data-ajax="false"> Privacy</a></li>
+        <li><a id="more_menu" data-icon="custom"  href="add_more_menu.htm" data-ajax="false"> More</a> </li>
+      </ul>
+    </div>
+    <!-- /navbar -->
+    <div class="mar10 f12" align="center"><a href="#" data-ajax="false" style="color:#fff; text-decoration:none; font-weight:normal;">Full Desktop Site</a></div>
+  </div>
+  <!-- /footer --> <script language="JavaScript" src="sv3/media/sv3.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery-1.6.4.min.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.js" type="text/javascript"></script> 
+  
+  <!--[if IE lt9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]--> 
+  
+</div>
+<!-- /page -->
+</body>
+</html>
+
+<!-- d_mar -->

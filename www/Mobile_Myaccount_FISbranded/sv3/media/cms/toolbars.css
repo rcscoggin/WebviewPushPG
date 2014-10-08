@@ -1,0 +1,151 @@
+/* side panel elements */
+
+#cssDemo {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+#cmsTools {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.toolbar {
+	width: 145px;
+	margin: 0px 0px 20px 0px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	background-color: #EAEAEA;
+	border: 2px solid #000066;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=135, color=gray, strength=4);
+}
+
+.toolbar h3 {
+	margin: 0em;
+	padding: 3px 5px 3px 5px;
+	font-size: 1.0em;
+	color: #002A65;
+	background-color: #DCDAD7;
+	border-bottom: 1px solid #C3C0BB;
+	text-align: center;
+}
+
+h3.toolHeader {
+	text-align: left;
+	padding: 3px 0px 3px 30px;
+	font-weight: bold;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	white-space: nowrap;
+	color: #FFFFFF;
+	background-color: #7354B3;
+	background-image: url(mod_hdr.gif);
+	background-position: center;
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #F8DF60;
+}
+
+h3.page {
+	background: url(mod/mod_hdr_text.gif) no-repeat left;
+}
+
+h3.tools {
+	background: url(mod/mod_hdr_tools.gif) no-repeat left;
+}
+
+.toolbar .toolbarBody {
+	padding: 8px;
+}
+
+.toolbar .toolbarBody INPUT {
+	margin: 0px 0px 8px 0px;
+}
+
+ul.btns {
+	margin: 0em;
+	padding: 0em;
+	text-align: left;
+}
+
+.btns li {
+	margin: 0em;
+	padding: 0em;
+	line-height: 1.25em;
+	list-style: none;
+	border-bottom: 1px solid #6A6A6A;
+}
+
+.btns .divider {
+	border-top: 1px solid #6A6A6A;
+}
+
+.toolbar .btns a,
+.toolbar .btns a:link,
+.toolbar .btns a:visited {
+	display: block;
+	padding: 3px 5px 3px 5px;
+	color: #585858;
+	background-color: transparent;
+	border-top: 2px solid #FFFFFF;
+	border-left: 2px solid #FFFFFF;
+	border-right: 2px solid #D4D4D4;
+	border-bottom: 2px solid #D4D4D4;
+	text-decoration: none;
+}
+
+.toolbar .btns a:active,
+.toolbar .btns a:hover {
+	padding: 4px 4px 2px 6px;
+	color: #000066;
+	background-color: #FFFFFF;
+	border-top: 2px solid #8A8A8A;
+	border-left: 2px solid #8A8A8A;
+	border-right: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+}
+
+.toolbar .btns a.toplink,
+.toolbar .btns a.toplink:link,
+.toolbar .btns a.toplink:visited {
+	padding: 3px 5px 3px 5px;
+	font-weight: bold;
+	color: #3D382B;
+	background: #E6D88C url(btn/btn_off.gif) repeat-x top;
+	border: 1px solid #97873E;
+	border-top: 1px solid #FBF7C0;
+	border-left: 1px solid #FBF7C0;
+	border-right: 1px solid #F1DC8C;
+	border-bottom: 1px solid #F1DC8C;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.toolbar .btns a.toplink:active,
+.toolbar .btns a.toplink:hover {
+	padding: 4px 4px 2px 6px;
+	color: #3D382B;
+	background: #F6EBB3 url(btn/btn_on.gif) repeat-x top;
+	border: 1px solid #4B441F;
+	border-top: 1px solid #8A8A8A;
+	border-left: 1px solid #8A8A8A;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.toolbar .btns a.sublink,
+.toolbar .btns a.sublink:link,
+.toolbar .btns a.sublink:visited {
+	padding: 2px 5px 2px 15px;
+}
+
+.toolbar .btns a.sublink:active,
+.toolbar .btns a.sublink:hover {
+	padding: 3px 4px 1px 16px;
+}
+
+.toolbar .btns .text {
+	padding: 3px 7px 3px 7px;
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Gift Card - SMS Alert</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- iphone -->
+<link rel="stylesheet" href="sv3/media/iphone.css"  type="text/css" media="only screen and (min-width:0px) and (max-width:320px)">
+<!-- iPad -->
+<link rel="stylesheet" href="sv3/media/ipad.css"  type="text/css" media="only screen and (min-width:700px) and (max-width:2100px)">
+<!-- BB,SAMSUNG,MOTO -->
+<link rel="stylesheet" href="sv3/media/bb_sam_moto.css"  type="text/css" media="only screen and (min-width:320px) and (max-width:480px)">
+<!-- General Style -->
+<link rel="stylesheet" href="sv3/media/style.css" type="text/css" />
+<!-- Mobo UI Style -->
+<link rel="stylesheet" href="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.css" type="text/css"/>
+<noscript>
+<style type="text/css" media="all">
+@import url("sv3/media/sv3_noscript.css");
+</style>
+</noscript>
+</head><body>
+<div data-role="page">
+  <div data-role="header"> 
+    <!--	<h1>I'm a header</h1>	-->
+    <div id="hdrContainer">
+      <div id="hdr"> <a data-ajax="false" href="javascript: history.go(-1);" class="btn-hdr ui-shadow"><span><img src="sv3/media/back1.png" width="9" height="15"  alt="back" /></span></a> </div>
+    </div>
+    <div class="navigation">
+      <div class="home"><a data-ajax="false" href="index.htm"><img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/home.png" width="26" height="26"alt="home"></a></div>
+      <div class="ma"><a data-ajax="false" style="color:#fff; font-weight:normal;" href="account_menu.htm">My Account <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" style="margin:0 0 0 5px;" width="10" height="6" alt="down_arrow"></a></div>
+      <!--<div class="oc"><a data-ajax="false" style="color:#fff;" href="order_card.htm">Order Cards</a></div>-->
+      <div class="menuu"><a data-ajax="false" style="color:#fff;" href="primary_menu.htm">Menu <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" width="10" style="margin:0 0 0 3px;" height="6" alt="down_arrow"></a></div>
+      <div class="lout"><a data-ajax="false" style="color:#fff;" href="login.htm">Sign out</a></div>
+    </div>
+    <!-- /navbar --> 
+  </div>
+  <div data-role="content">
+    <div class="content">
+      <div class="mar_bot10">
+        <h1 id="pageTitle">Text Message (SMS) Alerts</h1>
+        <h2 id="subTitle">- Edit</h2>
+      </div>
+      <label>Step 1 of 3</label>
+      <hr size="1" class="mar_bot10">
+      <div class="mar10"> <span class="boldd">Please note</span>:
+        </p>
+        <ul>
+          <li>(1) Message and Data Rates May Apply</li>
+          <li>(2) You will need to re-enroll if you change mobile providers, even if you keep the same phone number.</li>
+          <li>(3) All messages you receive regarding this account will begin with '<span class="boldd">CardSvcs:</span>'</li>
+        </ul>
+      </div>
+      <label class="boxLabel">Enroll in Text Message (SMS) Alerts</label>
+      <hr size="1" class="mar_bot10">
+      <div class="ui-grid-a">
+        <div class="ui-block-a">
+          <div class="mar_bot10">
+            <h3>Country *</h3>
+            <select name="country" id="country" class="width-135px" onchange="country_handler();">
+              <option value="0">Select</option>
+              <option value="4" id="4">Afghanistan</option>
+              <option value="8" id="8">Albania</option>
+              <option value="12" id="12">Algeria</option>
+              <option value="20" id="20">Andorra</option>
+              <option value="24" id="24">Angola</option>
+              <option value="660" id="660">Anguilla</option>
+              <option value="28" id="28">Antigua-Barbuda</option>
+              <option value="51" id="51">Armenia</option>
+              <option value="533" id="533">Aruba</option>
+              <option value="36" id="36">Australia</option>
+              <option value="40" id="40">Austria</option>
+              <option value="31" id="31">Azerbaijan</option>
+              <option value="44" id="44">Bahamas</option>
+              <option value="48" id="48">Bahrain</option>
+              <option value="50" id="50">Bangladesh</option>
+              <option value="52" id="52">Barbados</option>
+              <option value="112" id="112">Belarus</option>
+              <option value="56" id="56">Belgium</option>
+              <option value="84" id="84">Belize</option>
+              <option value="204" id="204">Benin</option>
+              <option value="60" id="60">Bermuda</option>
+              <option value="68" id="68">Bolivia, Plurinational State of</option>
+              <option value="70" id="70">Bosnia and Herzegovina</option>
+              <option value="76" id="76">Brazil</option>
+              <option value="92" id="92">British Virgin Islands</option>
+              <option value="96" id="96">Brunei Darussalam</option>
+              <option value="100" id="100">Bulgaria</option>
+              <option value="854" id="854">Burkina Faso</option>
+              <option value="116" id="116">Cambodia</option>
+              <option value="124" id="124">Canada</option>
+              <option value="132" id="132">Cape Verde Island</option>
+              <option value="136" id="136">Cayman Islands</option>
+              <option value="148" id="148">Chad</option>
+              <option value="152" id="152">Chile</option>
+              <option value="156" id="156">China</option>
+              <option value="170" id="170">Colombia</option>
+              <option value="178" id="178">Congo</option>
+              <option value="188" id="188">Costa Rica</option>
+              <option value="191" id="191">Croatia</option>
+              <option value="192" id="192">Cuba</option>
+              <option value="196" id="196">Cyprus</option>
+              <option value="203" id="203">Czech Republic</option>
+              <option value="208" id="208">Denmark</option>
+              <option value="212" id="212">Dominica</option>
+              <option value="218" id="218">Ecuador</option>
+              <option value="818" id="818">Egypt</option>
+              <option value="222" id="222">El Salvador</option>
+              <option value="233" id="233">Estonia</option>
+              <option value="234" id="234">Faeroe Islands</option>
+              <option value="242" id="242">Fiji</option>
+              <option value="246" id="246">Finland</option>
+              <option value="250" id="250">France</option>
+              <option value="258" id="258">French Polynesia</option>
+              <option value="270" id="270">Gambia</option>
+              <option value="981" id="981">Georgia (981)</option>
+              <option value="280" id="280">Germany</option>
+              <option value="288" id="288">Ghana</option>
+              <option value="292" id="292">Gibraltar</option>
+              <option value="300" id="300">Greece</option>
+              <option value="304" id="304">Greenland</option>
+              <option value="308" id="308">Grenada</option>
+              <option value="312" id="312">Guadeloupe</option>
+              <option value="316" id="316">Guam</option>
+              <option value="320" id="320">Guatemala</option>
+              <option value="328" id="328">Guyana</option>
+              <option value="332" id="332">Haiti</option>
+              <option value="340" id="340">Honduras</option>
+              <option value="344" id="344">Hong Kong</option>
+              <option value="348" id="348">Hungary</option>
+              <option value="352" id="352">Iceland</option>
+              <option value="356" id="356">India</option>
+              <option value="360" id="360">Indonesia</option>
+              <option value="364" id="364">Iran</option>
+              <option value="368" id="368">Iraq</option>
+              <option value="372" id="372">Ireland</option>
+              <option value="376" id="376">Israel</option>
+              <option value="380" id="380">Italy</option>
+              <option value="384" id="384">Ivory Coast</option>
+              <option value="388" id="388">Jamaica</option>
+              <option value="392" id="392">Japan</option>
+              <option value="400" id="400">Jordan</option>
+              <option value="398" id="398">Kazakhstan</option>
+              <option value="404" id="404">Kenya</option>
+              <option value="410" id="410">Korea, Republic of</option>
+              <option value="414" id="414">Kuwait</option>
+              <option value="428" id="428">Latvia</option>
+              <option value="422" id="422">Lebanon</option>
+              <option value="430" id="430">Liberia</option>
+              <option value="434" id="434">Libyan Arab Jamahiriya</option>
+              <option value="438" id="438">Lichtenstein</option>
+              <option value="440" id="440">Lithuania</option>
+              <option value="442" id="442">Luxembourg</option>
+              <option value="446" id="446">Macao</option>
+              <option value="807" id="807">Macedonia</option>
+              <option value="450" id="450">Madagascar</option>
+              <option value="454" id="454">Malawi</option>
+              <option value="458" id="458">Malaysia</option>
+              <option value="462" id="462">Maldives</option>
+              <option value="470" id="470">Malta</option>
+              <option value="474" id="474">Martinique</option>
+              <option value="480" id="480">Mauritius</option>
+              <option value="484" id="484">Mexico</option>
+              <option value="498" id="498">Moldova</option>
+              <option value="496" id="496">Mongolia</option>
+              <option value="499" id="499">Montenegro</option>
+              <option value="500" id="500">Montserrat</option>
+              <option value="504" id="504">Morocco</option>
+              <option value="508" id="508">Mozambique</option>
+              <option value="516" id="516">Namibia</option>
+              <option value="524" id="524">Nepal</option>
+              <option value="528" id="528">Netherlands</option>
+              <option value="530" id="530">Netherlands, Antilles</option>
+              <option value="540" id="540">New Caledonia</option>
+              <option value="554" id="554">New Zealand</option>
+              <option value="558" id="558">Nicaragua</option>
+              <option value="562" id="562">Niger</option>
+              <option value="566" id="566">Nigeria</option>
+              <option value="578" id="578">Norway</option>
+              <option value="512" id="512">Oman</option>
+              <option value="586" id="586">Pakistan</option>
+              <option value="591" id="591">Panama</option>
+              <option value="598" id="598">Papua New Guinea</option>
+              <option value="600" id="600">Paraguay</option>
+              <option value="604" id="604">Peru</option>
+              <option value="608" id="608">Philippines</option>
+              <option value="616" id="616">Poland</option>
+              <option value="620" id="620">Portugal</option>
+              <option value="634" id="634">Qatar</option>
+              <option value="642" id="642">Romania</option>
+              <option value="643" id="643">Russian Federation</option>
+              <option value="659" id="659">Saint Kitts-Nevis</option>
+              <option value="662" id="662">Saint Lucia</option>
+              <option value="670" id="670">Saint Vincent and the Grenadines</option>
+              <option value="682" id="682">Saudi Arabia</option>
+              <option value="690" id="690">Seychelles</option>
+              <option value="694" id="694">Sierra Leone</option>
+              <option value="702" id="702">Singapore</option>
+              <option value="703" id="703">Slovakia</option>
+              <option value="705" id="705">Slovenia</option>
+              <option value="710" id="710">South Africa</option>
+              <option value="724" id="724">Spain</option>
+              <option value="144" id="144">Sri Lanka</option>
+              <option value="736" id="736">Sudan(736)</option>
+              <option value="740" id="740">Suriname</option>
+              <option value="752" id="752">Sweden</option>
+              <option value="756" id="756">Switzerland</option>
+              <option value="760" id="760">Syrian Arab Republic</option>
+              <option value="158" id="158">Taiwan</option>
+              <option value="834" id="834">Tanzania</option>
+              <option value="764" id="764">Thailand</option>
+              <option value="768" id="768">Togo</option>
+              <option value="780" id="780">Trinidad and Tobago</option>
+              <option value="788" id="788">Tunisia</option>
+              <option value="792" id="792">Turkey</option>
+              <option value="796" id="796">Turks and Caicos Islands</option>
+              <option value="800" id="800">Uganda</option>
+              <option value="980" id="980">Ukraine (980)</option>
+              <option value="784" id="784">United Arab Emirates</option>
+              <option value="826" id="826">United Kingdom</option>
+              <option value="826" id="826" selected>United States</option>
+              <option value="858" id="858">Uruguay</option>
+              <option value="860" id="860">Uzbekistan</option>
+              <option value="862" id="862">Venezuela, Bolivarian Republic of</option>
+              <option value="704" id="704">Vietnam</option>
+              <option value="887" id="887">Yemen</option>
+              <option value="891" id="891">Yugoslavia</option>
+              <option value="894" id="894">Zambia</option>
+              <option value="716" id="716">Zimbabwe</option>
+            </select>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <h3>Country Phone Code</h3>
+          <span>1</span> </div>
+        <div class="ui-block-a">
+          <div class="mar_bot10">
+            <h3>Carrier *</h3>
+            <select name="carrier" id="carrier" class="width-135px">
+              <option value="0">Select</option>
+              <option value="1">At&amp;T</option>
+              <option value="0" selected>Verizon</option>
+            </select>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <h3 for="language">Language *</h3>
+          <select name="carrier" id="carrier" class="width-135px">
+            <option value="0">Select</option>
+            <option value="1" selected>English</option>
+            <option value="0">French</option>
+          </select>
+        </div>
+        <div class="ui-block-a">
+          <div class="mar_bot10">
+            <h3 for="mobile_number" class="margin-top-5px">Mobile Number *</h3>
+            <input type="text" value="954-555-1212" id="mobile_number" name="mobile_number" size="25" maxlength="25" oncopy="alert('Copy and paste has been disabled in this field. \n Please type your phone number manually.'); return false;" onpaste="alert('Copy and paste has been disabled in this field. \n Please type your phone number manually.'); return false;" >
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <h3 for="mobile_number" class="margin-top-5px">Confirm Mobile Number *</h3>
+          <input type="text" id="mobile_number" name="mobile_number" size="25" maxlength="25"  value="954-555-1212" oncopy="alert('Copy and paste has been disabled in this field. \n Please type your phone number manually.'); return false;" onpaste="alert('Copy and paste has been disabled in this field. \n Please type your phone number manually.'); return false;" >
+        </div>
+        <div class="ui-block-a">
+          <div class="mar_bot10">
+            <h3 class="mar_bot10">Time Zone </h3>
+            <select name="time_zone" id="time_zone">
+              <option value="0">Select</option>
+              <OPTION  value="Greenwich Mean Time (GMT +/-0)">Greenwich Mean Time (GMT +/-0)</OPTION>
+              <OPTION  value="SE Greenland (GMT +1)">SE Greenland (GMT +1)</OPTION>
+              <OPTION  value="Atlantic Ocean Time (GMT +2)">Atlantic Ocean Time (GMT +2)</OPTION>
+              <OPTION  value="Greenland (GMT +3)">Greenland (GMT +3)</OPTION>
+              <OPTION  value="Newfoundland Time (GMT +3.5)">Newfoundland Time (GMT +3.5)</OPTION>
+              <OPTION  value="Atlantic Time (GMT +4)">Atlantic Time (GMT +4)</OPTION>
+              <OPTION  value="Eastern Standard Time (GMT +5)" selected>Eastern Standard Time (GMT +5)</OPTION>
+              <OPTION  value="Central Standard Time (GMT +6)">Central Standard Time (GMT +6)</OPTION>
+              <OPTION  value="Mountain Standard Time (GMT +7)">Mountain Standard Time (GMT +7)</OPTION>
+              <OPTION  value="Pacific Standard Time (GMT +8)">Pacific Standard Time (GMT +8)</OPTION>
+              <OPTION  value="Alaska TimeAlaska Time (GMT +9)">Alaska TimeAlaska Time (GMT +9)</OPTION>
+              <OPTION  value="Hawaii (GMT +10)">Hawaii (GMT +10)</OPTION>
+              <OPTION  value="Pacific Ocean (GMT +11)">Pacific Ocean (GMT +11)</OPTION>
+              <OPTION  value="International Date Line (GMT +/-12)">International Date Line (GMT +/-12)</OPTION>
+              <OPTION  value="Central European Time (GMT -1)">Central European Time (GMT -1)</OPTION>
+              <OPTION  value="Eastern European Time (GMT -2)">Eastern European Time (GMT -2)</OPTION>
+              <OPTION  value="Moscow/Middle East/Africa (GMT -3)">Moscow/Middle East/Africa (GMT -3)</OPTION>
+              <OPTION  value="Iran (GMT -3.5)">Iran (GMT -3.5)</OPTION>
+              <OPTION  value="NW Caspian Sea (GMT -4)">NW Caspian Sea (GMT -4)</OPTION>
+              <OPTION  value="Afghanistan (GMT -4.5)">Afghanistan (GMT -4.5)</OPTION>
+              <OPTION  value="Ural Mountain Time (GMT -5)">Ural Mountain Time (GMT -5)</OPTION>
+              <OPTION  value="India (GMT -5.5)">India (GMT -5.5)</OPTION>
+              <OPTION  value="Almaty Time (GMT -6)">Almaty Time (GMT -6)</OPTION>
+              <OPTION  value="Burma (GMt -6.5)">Burma (GMt -6.5)</OPTION>
+              <OPTION  value="Mongolian Time (GMT -7)">Mongolian Time (GMT -7)</OPTION>
+              <OPTION  value="China (GMT -8)">China (GMT -8)</OPTION>
+              <OPTION  value="Japan (GMT -9)">Japan (GMT -9)</OPTION>
+              <OPTION  value="Mid Australia (GMt -9.5)">Mid Australia (GMt -9.5)</OPTION>
+              <OPTION  value="Eastern Russia (GMT -10)">Eastern Russia (GMT -10)</OPTION>
+              <OPTION  value="Kamchatisky (GMT -11)">Kamchatisky (GMT -11)</OPTION>
+            </SELECT>
+          </div>
+        </div>
+      </div>
+      <div class="mar_bot10">
+        <fieldset class="shows">
+          <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" checked />
+          <label for="checkbox-2" >Store Messages from 9AM to 9PM</label>
+        </fieldset>
+      </div>
+      <div class="mar10">
+        <label class="boxLabel">Alerts Types</label>
+        <hr size="1" class="mar_bot10">
+      </div>
+      <div class="shows mar_bot10">
+        <form>
+          <fieldset data-role="controlgroup" data-mini="true">
+            <input name="radio-choice-v-6" id="radio-choice-v-6a" value="on" checked="checked" type="checkbox">
+            <label for="radio-choice-v-6a">Authorization Approval</label>
+            <input name="radio-choice-v-6" id="radio-choice-v-6b" value="off" checked="checked" type="checkbox">
+            <label for="radio-choice-v-6b">Value Loads</label>
+            <input name="radio-choice-v-6" id="radio-choice-v-6c" value="other" checked="checked" type="checkbox">
+            <label for="radio-choice-v-6c">Authorization Declines</label>
+            <input name="radio-choice-v-6" id="radio-choice-v-6d" value="other" checked="checked" type="checkbox">
+            <label for="radio-choice-v-6d">Low Balance Alert</label>
+          </fieldset>
+        </form>
+      </div>
+      <div><a data-ajax="false" href="primary_menu.htm" data-inline="true" data-role="button" data-theme="a">Cancel</a><a data-ajax="false" data-inline="true" href="sms_alert_vs.htm" data-role="button" data-theme="a">Continue</a> </div>
+    </div>
+  </div>
+  <!-- /content -->
+  <div data-role="footer" class="nav-glyphish-example" data-theme="b">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+      <ul>
+        <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li>
+        <li><a id="about" data-icon="custom" href="about.htm" data-ajax="false"> About</a></li>
+        <!-- <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li> 
+                <li><a id="terms" data-icon="custom" href="terms.htm" data-ajax="false"> Terms</a></li>-->
+        <li><a id="terms" data-icon="custom" href="faq.htm" data-ajax="false"> FAQ</a></li>
+        <li><a id="privacy" data-icon="custom" href="privacy.htm" data-ajax="false"> Privacy</a></li>
+        <li><a id="more_menu" data-icon="custom"  href="add_more_menu.htm" data-ajax="false"> More</a> </li>
+      </ul>
+    </div>
+    <!-- /navbar -->
+    <div class="mar10 f12" align="center"><a  href="#" data-ajax="false" style="color:#fff; text-decoration:none; font-weight:normal;">Full Desktop Site</a></div>
+  </div>
+  <!-- /footer --> <script language="JavaScript" src="sv3/media/sv3.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery-1.6.4.min.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.js" type="text/javascript"></script> 
+  
+  <!--[if IE lt9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]--> 
+</div>
+<!-- /page -->
+
+</body>
+</html>
+
+<!-- d_mar -->

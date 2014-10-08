@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Gift Card - Deposit Check</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- iphone -->
+<link rel="stylesheet" href="sv3/media/iphone.css"  type="text/css" media="only screen and (min-width:0px) and (max-width:320px)">
+<!-- iPad -->
+<link rel="stylesheet" href="sv3/media/ipad.css"  type="text/css" media="only screen and (min-width:700px) and (max-width:2100px)">
+<!-- BB,SAMSUNG,MOTO -->
+<link rel="stylesheet" href="sv3/media/bb_sam_moto.css"  type="text/css" media="only screen and (min-width:320px) and (max-width:480px)">
+<!-- General Style -->
+<link rel="stylesheet" href="sv3/media/style.css" type="text/css" />
+<!-- Mobo UI Style -->
+<link rel="stylesheet" href="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.css" type="text/css"/>
+<noscript>
+<style type="text/css" media="all">
+@import url("sv3/media/sv3_noscript.css");
+</style>
+</noscript>
+</head><body>
+<div data-role="page">
+  <header>
+    <div id="hdrContainer">
+      <div id="hdr"> <a href="javascript: history.go(-1);" class="btn-hdr ui-shadow"><span><img src="sv3/media/back1.png" width="9" height="15"  alt="back" /></span></a> </div>
+    </div>
+    <div data-role="header" data-theme="b"> 
+      <!--	<h1>I'm a header</h1>	-->
+      <div class="navigation">
+        <div class="home"><a data-ajax="false" href="index.htm"><img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/home.png" width="26" height="26"alt="home"></a></div>
+        <div class="ma"><a data-ajax="false" style="color:#fff; font-weight:normal;" href="account_menu.htm">My Account <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" style="margin:0 0 0 5px;" width="10" height="6" alt="down_arrow"></a></div>
+        <!--<div class="oc"><a style="color:#fff;" href="order_card.htm">Order Cards</a></div>-->
+        <div class="menuu"><a  data-ajax="false" style="color:#fff;" href="primary_menu.htm">Menu <img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/down_arrow.png" width="10" style="margin:0 0 0 3px;" height="6" alt="down_arrow"></a></div>
+        <div class="lout"><a data-ajax="false" style="color:#fff;" href="login.htm">Sign out</a></div>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    
+    <!-- /header --> 
+    
+  </header>
+  <div data-role="content">
+    <div class="mar_bot10">
+      <h1 id="pageTitle">Deposit Check <a onclick="camera_instructions()" data-ajax="false" href="#" data-theme="a" data-inline="true" class="fl_right">&raquo; Instructions</a></h1>
+      <h2 id="subTitle">- Edit</h2>
+    </div>
+    <div class="content">
+      <div class="mar_bot10" id="camera_instructions" style="display:none"> [1] Place your check on a flat surface with a dark background and good lighting.<br>
+        [2] Make sure all four corners of the check are visible.<br>
+        [3] Make sure the text on the check looks clear.<br>
+        [4] Tap the camera images to take a picture of the front and back of your check. <br>
+        [5] <span class="red"> ! Try Again</span> This symbol means the check information was not captured. Tap the symbol to take another picture.<br>
+        [6] When the check information is captured, you’ll see a picture of your check covering the camera image.<br>
+        [7] Once you receive notice that the deposit was successful, you may shred your check. <br>
+        <a onclick="close_camera_instructions()" data-ajax="false" href="#" data-theme="a" data-inline="true">[X] Close</a> </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a">
+          <div class="mar_bot10">
+            <div id="front_check_panel">
+              <h3>Front of Check</h3>
+              <label class="camera_edit_front" >
+                <input type="file"  id="front_snap" accept="image/*;capture=camera">
+              </label>
+            </div>
+          </div>
+          <div class="mar_bot10" id="front_check_image_panel" style="display:none">
+            <h3>Front Check Image</h3>
+            <img src="about:blank"  id="front_check_image"  alt="front_check_image" width="100" height="auto" > </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="mar_bot10">
+            <div id="back_check_panel">
+              <h3>Back of Check</h3>
+              <label class="camera_edit_back">
+                <input type="file" id="back_snap" accept="image/*;capture=camera">
+              </label>
+            </div>
+          </div>
+          <div class="mar_bot10" id="back_check_image_panel"  style="display:none">
+            <h3>Back Check Image</h3>
+            <img src="about:blank" id="back_check_image" alt="back_check_image" width="100" height="auto"> </div>
+        </div>
+      </div>
+      <div class="ui-grid-a mar_bot10">
+        <div class="ui-block-a">
+          <div class="mar_bot10">
+            <h3>Speed of Deposit</h3>
+            <select name="select">
+              <option value="" >Select</option>
+              <option value="" selected>Within Minutes, 1% fee</option>
+              <option value="">Within Days, 50¢</option>
+            </select>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <h3>Amount</h3>
+          <input type="tel" name="amount" id="amount" value="45" size="20" maxlength="30" title="Amount" class="mar_bot10">
+        </div>
+        <div class="ui-block-a">
+          <div class="mar_bot10">
+            <h3>Deposit To</h3>
+            <select name="select">
+              <option value="">Select</option>
+              <option value="" selected>Soni's prepaid Card</option>
+              <option value="">Saru's Prepaid Card</option>
+            </select>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <h3>Email Receipt To</h3>
+          <select name="select">
+            <option value="">Select</option>
+            <option value="" selected>soni123@soni.com</option>
+            <option value="">saru@saru.com</option>
+          </select>
+        </div>
+      </div>
+      <div> <a href="#" onclick="show_confirm();" data-inline="true" data-theme="a" data-role="button" data-ajax="false">Cancel</a> <a href="deposit_check_summary.htm" data-inline="true" data-theme="a" data-role="button" data-ajax="false">Continue</a> </div>
+    </div>
+  </div>
+  <!-- /content -->
+  
+  <div data-role="footer" class="nav-glyphish-example" data-theme="b">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+      <ul>
+        <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li>
+        <li><a id="about" data-icon="custom" href="about.htm" data-ajax="false"> About</a></li>
+        <!-- <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li> 
+                <li><a id="terms" data-icon="custom" href="terms.htm" data-ajax="false"> Terms</a></li>-->
+        <li><a id="terms" data-icon="custom" href="faq.htm" data-ajax="false"> FAQ</a></li>
+        <li><a id="privacy" data-icon="custom" href="privacy.htm" data-ajax="false"> Privacy</a></li>
+        <li><a id="more_menu" data-icon="custom"  href="add_more_menu.htm" data-ajax="false"> More</a> </li>
+      </ul>
+    </div>
+    <!-- /navbar -->
+    <div class="mar10 f12" align="center"><a href="#" data-ajax="false" style="color:#fff; text-decoration:none; font-weight:normal;">Full Desktop Site</a></div>
+  </div>
+  <!-- /footer --> 
+  <script language="JavaScript" src="sv3/media/sv3.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery-1.6.4.min.js" type="text/javascript"></script> 
+  <script language="JavaScript" src="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.js" type="text/javascript"></script> 
+  <!-- JS for camera--> 
+  <script>
+	var front_snap = document.getElementById("front_snap");
+front_snap.onchange=function(e){
+ var file=e.target.files[0];
+ var URL=window.URL|| window.webkitURL;
+ var fileURL=URL.createObjectURL(file);
+ var img= document.getElementById("front_check_image");
+ img.src=fileURL;
+ URL.revokeObjectURL(fileURL);
+ document.getElementById("front_check_image").style.display="block";
+ document.getElementById("front_check_image_panel").style.display="block";
+ document.getElementById("front_check_panel").style.display="none"; 
+};
+
+	var back_snap = document.getElementById("back_snap");
+back_snap.onchange=function(e){
+ var file=e.target.files[0];
+ var URL=window.URL|| window.webkitURL;
+ var fileURL=URL.createObjectURL(file);
+ var img= document.getElementById("back_check_image");
+ img.src=fileURL;
+ URL.revokeObjectURL(fileURL);
+  document.getElementById("back_check_image").style.display="block";
+   document.getElementById("back_check_image_panel").style.display="block";
+    document.getElementById("back_check_panel").style.display="none"; 
+};
+
+
+(function () {
+	
+	// import library
+	//eval( JELLY.unpack() );
+
+	addDomReady( function () {
+	
+		// Load our css
+		//Load.css( 'file-upload.css' );
+		
+		// Create a reusable tweening object
+		var tween = new Tween,
+	
+			// event handlers, including blur/focus to 
+			// restore keyboard navigation
+			onUploadChange = function ( e ) {
+
+				var status = retrieveData( this, 'upload-status' );
+				
+				if ( this.value ) {
+					// IE shows the whole system path, we're reducing it 
+					// to the filename for consistency
+					var value = browser.ie ? this.value.split('\\').pop() : this.value;
+					status.innerHTML = value;
+					insertAfter( status, this.parentNode );
+					
+					// Only tween if we're responding to an event
+					if ( e ) { 
+						tween.setElement( status ).
+							setOpacity( 0 ).
+							start({ 
+								opacity: 1, duration: 500 
+							});
+					}
+				}
+				else if ( status && status.parentNode ) {
+					removeElement( status );
+				}
+			}, 
+			onUploadFocus = function () { 
+				addClass( this.parentNode, 'focus' ); 
+			},
+			onUploadBlur = function () { 
+				removeClass( this.parentNode, 'focus' ); 
+			};
+		
+		
+		Q( '.file-upload input[type=file]' ).each( function ( field ) {
+			
+			// Create a status element, and store it
+			storeData( field, 'upload-status', createElement( 'span.file-upload-status' ) );
+			
+			// Bind events
+			addEvent( field, 'focus', onUploadFocus );
+			addEvent( field, 'blur', onUploadBlur );
+			addEvent( field, 'change', onUploadChange );
+			
+			// Set current state 
+			onUploadChange.call( field );
+			
+			// Move the file input in Firefox / Opera /Safari so that the button part is
+			// in the hit area. Otherwise we get a text selection cursor
+			// which you cannot override with CSS
+			if ( browser.firefox || browser.opera ) {
+				field.style.left = '-800px';
+			}
+			else if ( browser.ie ) {
+				// Minimizes the text input part in IE
+				field.style.width = '0';
+			}
+		});
+	});
+
+})();
+  function camera_instructions(){
+	   document.getElementById("camera_instructions").style.display="block"; 
+  }
+  
+ function close_camera_instructions(){document.getElementById("camera_instructions").style.display="none"; }
+</script> 
+  
+  <!--[if IE lt9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]--> 
+</div>
+<!-- /page -->
+
+</body>
+</html>
+<!-- d_mar -->

@@ -1,0 +1,25 @@
+/* IE button fix */
+
+a.btn,
+a.btn:link,
+a.btn:visited {
+	height: 1%;
+}
+
+.links a {
+	width: 100%;
+}
+
+.tabs a {
+	width: 100%;
+}
+
+.dataHeader th a {
+	width: 100%;
+}
+
+.toolbar .btns a,
+.toolbar .btns a:link,
+.toolbar .btns a:visited {
+	width: 100%;
+}

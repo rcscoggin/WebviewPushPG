@@ -1,0 +1,137 @@
+body {
+	margin:1em;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 0.7em;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.header {
+	font-size: 1.2em;
+}
+
+.header td {
+	padding: 0em 0em 1em 0em;
+}
+
+.header .logo {
+	
+}
+
+.label {
+	font-weight: bold;
+}
+
+
+/* table definitions */
+
+.sumTable {
+	margin: 0em 0em 1em 0em;
+	font-size: 1.0em;
+	background-color: #E9EEF3;
+	border-top: 1px solid #000066;
+	border-left: 1px solid #000066;
+}
+
+.sumTable th {
+	padding: 5px 5px 0px 5px;
+	border-right: 1px solid #000066;
+}
+
+.sumTable td {
+	padding: 0px 5px 5px 5px;
+	border-right: 1px solid #000066;
+	border-bottom: 1px solid #000066;
+}
+
+.dataTable {
+	margin: 0em 0em 1em 0em;
+	font-size: 1.0em;
+}
+
+.dataTable th {
+	padding: 5px;
+	background-color: #E9EEF3;
+	border-top: 1px solid #000066;
+	border-left: 1px solid #000066;
+	border-bottom: 1px solid #000066;
+}
+
+.dataTable th.last {
+	border-right: 1px solid #000066;
+}
+
+.dataTable td {
+	padding: 5px;
+}
+
+.boxborder {
+	background-color: #000066;
+}
+
+.box-top-left {
+	border-color: #000066;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	background-color: #E9EEF3;
+	padding-bottom: 0px;
+}
+
+.box-top-right {
+	border-color: #000066;
+	border-style: solid;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 1px;
+	background-color: #E9EEF3;
+	padding-bottom: 0px;
+}
+
+.box-btm-left {
+	border-color: #000066;
+	border-style: solid;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-color: #E9EEF3;
+	padding-top: 0px;
+}
+
+.box-btm-right {
+	border-color: #000066;
+	border-style: solid;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	background-color: #E9EEF3;
+	padding-top: 0px;
+}
+
+.box-left {
+	border-color: #000066;
+	border-style: solid;
+	border-width: 1px;
+	border-right-width: 0px;
+	background-color: #E9EEF3;
+}
+
+.box-right {
+	border-color: #000066;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #E9EEF3;
+}
+
+
+
+
+
+
+
+

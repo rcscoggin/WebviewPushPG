@@ -1,0 +1,45 @@
+/* tooltip elements */
+
+a.help,
+a.help:link,
+a.help:visited {
+	margin: 0px 0px 0px 5px;
+	width: 1.5em;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #99A2B4;
+	border: 1px solid #515B6E;
+	text-decoration: none;
+	text-align: center;
+}
+
+a.help:active,
+a.help:hover {
+	color: #000000;
+	background-color: #CED4DB;
+	border: 1px solid #515B6E;
+	text-decoration: none;
+	cursor: default;
+}
+
+#dhtmltooltip {	
+	visibility: hidden;
+	position: absolute;
+	width: 250px;
+	padding: 2px 5px 2px 5px;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	color: #000066;
+	background-color: #FFFBE5;
+	border: 1px solid #121B79;
+	z-index: -3000;
+	/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+}
+
+#modal #dhtmltooltip {
+	font-size: 0.6em;
+}
+

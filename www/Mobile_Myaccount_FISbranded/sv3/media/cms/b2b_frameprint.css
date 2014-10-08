@@ -1,0 +1,28 @@
+body {
+	background-color: #FFFFFF;
+	margin: 0px 0px 0px 0px;
+}
+
+.printOnly {
+	display: block;
+}
+
+h1,
+h2 {
+	margin: 0px 0px 10px 0px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+#reportTitle {
+	display: block;
+	font-size: 1.0em;
+	color: #000066;
+}
+
+#reportDate {
+	display: block;
+	font-size: 0.8em;
+	color: #000000;
+}

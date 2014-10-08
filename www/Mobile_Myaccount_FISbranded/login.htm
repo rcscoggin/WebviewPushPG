@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Gift Card - Login</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- iphone -->
+<link rel="stylesheet" href="sv3/media/iphone.css"  type="text/css" media="only screen and (min-width:0px) and (max-width:320px)">
+<!-- iPad -->
+<link rel="stylesheet" href="sv3/media/ipad.css"  type="text/css" media="only screen and (min-width:700px) and (max-width:2100px)">
+<!-- BB,SAMSUNG,MOTO -->
+<link rel="stylesheet" href="sv3/media/bb_sam_moto.css"  type="text/css" media="only screen and (min-width:320px) and (max-width:480px)">
+<!-- General Style -->
+<link rel="stylesheet" href="sv3/media/style.css" type="text/css" />
+<!-- Mobo UI Style -->
+<link rel="stylesheet" href="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.css" type="text/css"/>
+<noscript>
+<style type="text/css" media="all">
+@import url("sv3/media/sv3_noscript.css");
+</style>
+</noscript>
+</head><body>
+<div data-role="page">
+  <header>
+    <div id="hdrContainer">
+      <div id="hdr"> <a data-ajax="false" href="javascript: history.go(-1);" class="btn-hdr ui-shadow"><span><img src="sv3/media/back1.png" width="9" height="15"  alt="back" /></span></a> </div>
+    </div>
+    <div data-role="header" data-theme="b"> 
+      <!--	<h1>I'm a header</h1>	-->
+      <div class="navigation">
+        <div class="home1"><a data-ajax="false" href="index.htm"><img src="mobiledemog/media/G2/jquery.mobile/glyphish-icons/home.png" width="26" height="26"alt="home"></a></div>
+        <div class="sign"><a data-ajax="false" style="color:#fff; font-weight:normal;" href="login.htm">Sign In</a></div>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    
+    <!-- /header --> 
+    
+  </header>
+  <div data-role="content">
+    <div class="content"> 
+      <!--      <div class="mar_bot10 shows1">
+        <select name="flip-1" id="my-slider" data-role="slider">
+          <option value="on">Gift Card</option>
+          <option value="off">Relationship Card</option>
+        </select>
+      </div>-->
+      <div id="gift_card">
+        <div class="mar_bot10">
+          <h1 id="pageTitle">Access My Account</h1>
+          <h2 id="subTitle">&nbsp;</h2>
+        </div>
+        <div class="boxLabel mar_bot10">Existing Cardholders</div>
+        <form name="login">
+          <div class="mar_bot20">
+            <input type="text" name="username" id="username" value="" placeholder="User Name*" maxlength="20" title="Your username" class="mar10">
+            <input type="password" name="password" id="password" value="" placeholder="Password*" maxlength="20" title="Your password">
+          </div>
+          <div class="mar_bot20"><a href="forgor_login_card_number.htm" title="Get help with your login information" data-inline="true" data-ajax="false">Forgot Sign In?</a> <a data-ajax="false" href="need_login_card_number.htm" title="Sign up for online account access" data-inline="true" class="mar_left10">Need Sign In?</a> </div>
+          <div  class="mar_bot20">
+            <div class="boxLabel mar_bot10">Language Selection</div>
+            <select name="select" ONCHANGE="goto(this.form)" data-inline="true">
+              <option>Select Language</option>
+              <option value="English" selected>English</option>
+              <option value="French">French</option>
+              <option value="Spanish">Spanish</option>
+            </select>
+          </div>
+          <div><a data-ajax="false" href="index.htm" data-inline="true" data-role="button" data-theme="a">Cancel</a><a data-ajax="false" data-inline="true" href="2fa_menu.htm" data-role="button" data-theme="a">Sign In</a> </div>
+        </form>
+      </div>
+      <!--<div id="rel_card" style="display:none;">
+        <h1 id="pageTitle">Access My Account</h1>
+        <h2 id="subTitle">- Relationship Card</h2>
+        <h3 class="boxLabel mar10">Existing Cardholders</h3>
+        <form action="#" method="get" name="login" autocomplete="on"  id="login" >
+          <div class="mar_bot20">
+            <input type="text" name="username" id="username" value="" placeholder="User Name*" maxlength="20" title="Your username" class="mar10">
+            <input type="password" name="password" id="password" value="" placeholder="Password*" maxlength="20" title="Your password">
+          </div>
+          <div class="mar_bot10"><a href="forgot_sigin_relation.htm" title="Get help with your login information" data-inline="true" data-ajax="false">Forgot Sign In?</a> <a data-ajax="false" href="need_signin_relation.htm" title="Sign up for online account access" data-inline="true" class="mar_left10">Need Sign In?</a> </div>
+          <div><a data-ajax="false" href="index.htm" data-inline="true" data-role="button" data-theme="a">Cancel</a><a data-ajax="false" data-inline="true" href="2fa_menu.htm" data-role="button" data-theme="a">Sign In</a> </div>
+        </form>
+      </div>--> 
+    </div>
+  </div>
+  <!-- /content -->
+  
+  <div data-role="footer" class="nav-glyphish-example" data-theme="b">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+      <ul>
+        <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li>
+        <li><a id="about" data-icon="custom" href="about.htm" data-ajax="false"> About</a></li>
+        <!-- <li><a id="email" data-icon="custom" href="contact.htm" data-ajax="false"> Contact</a></li> 
+                <li><a id="terms" data-icon="custom" href="terms.htm" data-ajax="false"> Terms</a></li>-->
+        <li><a id="terms" data-icon="custom" href="faq.htm" data-ajax="false"> FAQ</a></li>
+        <li><a id="privacy" data-icon="custom" href="privacy.htm" data-ajax="false"> Privacy</a></li>
+        <li><a id="more_menu" data-icon="custom"  href="add_more_menu.htm" data-ajax="false"> More</a> </li>
+      </ul>
+    </div>
+    <!-- /navbar -->
+    <div class="mar10 f12" align="center"><a href="#" data-ajax="false" style="color:#fff; text-decoration:none; font-weight:normal;">Full Desktop Site</a></div>
+  </div>
+  <!-- /footer --> 
+</div>
+<script language="JavaScript" src="sv3/media/sv3.js" type="text/javascript"></script> 
+<script language="JavaScript" src="mobiledemog/media/G2/jquery-1.6.4.min.js" type="text/javascript"></script> 
+<script language="JavaScript" src="mobiledemog/media/G2/jquery.mobile/jquery.mobile.min.js" type="text/javascript"></script> 
+<script language="JavaScript" src="sv3/media/supernote.js" type="text/javascript"></script> 
+<!--[if IE lt9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]--> 
+<script type="text/javascript">
+  $('#my-slider').change(function() {
+    var myswitch = $(this);
+    var show     = myswitch[0].selectedIndex == 1 ? true:false;
+    $('#rel_card').toggle(show);
+
+    var myswitch = $(this);
+    var show     = myswitch[0].selectedIndex == 0 ? true:false;
+    $('#gift_card').toggle(show);
+	
+});
+</script> 
+<!-- /page -->
+
+</body>
+</html>
+
+<!-- d_mar -->
