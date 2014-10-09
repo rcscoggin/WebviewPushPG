@@ -19,7 +19,7 @@
   			console.log("start deviceready");
   			pushNotification = window.plugins.pushNotification;
       			
-      			$("#app-status-ul:first").replaceWith('<li>registering ' + device.platform + '</li>');
+      			$("#element1").replaceWith('<li>registering ' + device.platform + '</li>');
       			
 		 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
     				console.log("Registering device");
@@ -48,14 +48,14 @@
 
 			function onNotification(e) {
 
-    				$("#app-status-ul:first").replaceWith('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+    				$("#element1").replaceWith('<li>EVENT -> RECEIVED:' + e.event + '</li>');
 
     				switch( e.event )
     				{
     					case 'registered':
         					if ( e.regid.length > 0 )
         					{
-            						$("#app-status-ul:first").replaceWith('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+            						$("#element1").replaceWith('<li>REGISTERED -> REGID:' + e.regid + "</li>");
 	            						console.log("regID = " + e.regid);
         					}
     						break;
@@ -65,7 +65,7 @@
         				// you might want to play a sound to get the user's attention, throw up a dialog, etc.
         					if ( e.foreground )
         					{
-            						$("#app-status-ul:first").replaceWith('<li>--INLINE NOTIFICATION--' + '</li>');
+            						$("#element1").replaceWith('<li>--INLINE NOTIFICATION--' + '</li>');
 
             						// on Android soundname is outside the payload. 
         						 // On Amazon FireOS all custom attributes are contained within payload
@@ -78,23 +78,23 @@
         					{  // otherwise we were launched because the user touched a notification in the notification tray.
             						if ( e.coldstart )
             						{
-                						$("#app-status-ul:first").replaceWith('<li>--COLDSTART NOTIFICATION--' + '</li>');
+                						$("#element1").replaceWith('<li>--COLDSTART NOTIFICATION--' + '</li>');
             						}
             						else
             						{
-                						$("#app-status-ul:first").replaceWith('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+                						$("#element1").replaceWith('<li>--BACKGROUND NOTIFICATION--' + '</li>');
             						}
         					}
 
-       						$("#app-status-ul:first").replaceWith('<li>MESSAGE -> MSG: ' + e.payload.default + '</li>');
+       						$("#element1").replaceWith('<li>MESSAGE -> MSG: ' + e.payload.default + '</li>');
     						break;
 
     					case 'error':
-        					$("#app-status-ul:first").replaceWith('<li>ERROR -> MSG:' + e.msg + '</li>');
+        					$("#element1").replaceWith('<li>ERROR -> MSG:' + e.msg + '</li>');
     						break;
 
     					default:
-        					$("#app-status-ul:first").replaceWith('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+        					$("#element1").replaceWith('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
     						break;
   				}
 			}
@@ -106,7 +106,7 @@
     <div id="home">
     		<div id="app-status-div">
         		<ul id="app-status-ul">
-            			<li>WebviewPushPG Demo</li>
+            			<li id="element1">WebviewPushPG Demo</li>
         		</ul>
     		</div>
 	</div>
@@ -116,6 +116,6 @@
         app.initialize();
         console.log("End main script");
     </script>
-    <iframe src="Mobile_Myaccount_FISbranded/index.htm"></iframe>
+    <iframe src="Mobile_Myaccount_FISbranded/index.htm" height="80%" width="99%"  frameborder="0"></iframe>
     </body>
 </html>
