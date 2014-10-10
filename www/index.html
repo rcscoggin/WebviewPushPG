@@ -16,13 +16,13 @@
 		var pushNotification;
 
   		document.addEventListener("deviceready",function() { 
-  			console.log("start deviceready");
+  			$("#element1").text("start deviceready");
   			pushNotification = window.plugins.pushNotification;
       			
-      			$("#element1").replaceWith('<li>registering ' + device.platform + '</li>');
+      			$("#element1").text('<li>registering ' + device.platform + '</li>');
       			
 		 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
-    				console.log("Registering device");
+    				$("#element1").text("Registering device");
     				pushNotification.register(
     					successHandler,
     					errorHandler,
@@ -30,33 +30,33 @@
         					"senderID":"294771091766",
         					"ecb":"onNotification"
     					});
-    				console.log("Registration sent");
+    				$("#element1").text("Registration sent");
 			} else {
-    				console.log("Push says not Android");
+    				$("#element1").text("Push says not Android");
 			}
 			
-			console.log("end deviceready");
+			$("#element1").text("end deviceready");
   		}, false); // doc event listener
   		
   		 	function successHandler (result) {
-    				console.log('push register result = ' + result);
+    				$("#element1").text('push register result = ' + result);
 			}
 			
       			function errorHandler (error) {
-    				console.log('push register error = ' + error);
+    				$("#element1").text('push register error = ' + error);
 			}
 
 			function onNotification(e) {
 
-    				$("#element1").replaceWith('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+    				$("#element1").text('<li>EVENT -> RECEIVED:' + e.event + '</li>');
 
     				switch( e.event )
     				{
     					case 'registered':
         					if ( e.regid.length > 0 )
         					{
-            						$("#element1").replaceWith('<li>REGISTERED -> REGID:' + e.regid + "</li>");
-	            						console.log("regID = " + e.regid);
+            						$("#element1").text('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+	            					console.log("regID = " + e.regid);
         					}
     						break;
 
@@ -65,7 +65,7 @@
         				// you might want to play a sound to get the user's attention, throw up a dialog, etc.
         					if ( e.foreground )
         					{
-            						$("#element1").replaceWith('<li>--INLINE NOTIFICATION--' + '</li>');
+            						$("#element1").text('<li>--INLINE NOTIFICATION--' + '</li>');
 
             						// on Android soundname is outside the payload. 
         						 // On Amazon FireOS all custom attributes are contained within payload
@@ -78,23 +78,23 @@
         					{  // otherwise we were launched because the user touched a notification in the notification tray.
             						if ( e.coldstart )
             						{
-                						$("#element1").replaceWith('<li>--COLDSTART NOTIFICATION--' + '</li>');
+                						$("#element1").text('<li>--COLDSTART NOTIFICATION--' + '</li>');
             						}
             						else
             						{
-                						$("#element1").replaceWith('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+                						$("#element1").text('<li>--BACKGROUND NOTIFICATION--' + '</li>');
             						}
         					}
 
-       						$("#element1").replaceWith('<li>MESSAGE -> MSG: ' + e.payload.default + '</li>');
+       						$("#element1").text('<li>MESSAGE -> MSG: ' + e.payload.default + '</li>');
     						break;
 
     					case 'error':
-        					$("#element1").replaceWith('<li>ERROR -> MSG:' + e.msg + '</li>');
+        					$("#element1").text('<li>ERROR -> MSG:' + e.msg + '</li>');
     						break;
 
     					default:
-        					$("#element1").replaceWith('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+        					$("#element1").text('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
     						break;
   				}
 			}
@@ -112,9 +112,7 @@
 	</div>
 
     <script type="text/javascript">
-    	console.log("start main script");
         app.initialize();
-        console.log("End main script");
     </script>
     
     </body>
