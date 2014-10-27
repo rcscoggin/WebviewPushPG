@@ -16,6 +16,7 @@
 		var pushNotification;
 
   		document.addEventListener("deviceready",function() { 
+  			var iframe = document.getElementById('iframe');
   			$("#element1").text("start deviceready");
   			pushNotification = window.plugins.pushNotification;
       			
@@ -38,6 +39,13 @@
 			$("#element1").text("end deviceready");
   		}, false); // doc event listener
   		
+  			function sendMsgIfr() {
+				var iframe = document.getElementById('iframe');
+				iframe.contentWindow.postMessage({
+        				cameraEnabled: true
+      				}, "*");
+			}
+    			
   		 	function successHandler (result) {
     				$("#element1").text('push register result = ' + result);
 			}
@@ -103,14 +111,15 @@
     <body>
   
 
-    <div id="home">
+    	<div id="home">
     		<div id="app-status-div">
         		<ul id="app-status-ul">
             			<li id="element1">WebviewPushPG Demo</li>
         		</ul>
+        		<a href="" onClick="sendMsgIfr(); alert('msg sent'); return false;">Send Cam Avail Message</a><p>
     		</div>
 	</div>
-
-    <iframe src="Mobile_Myaccount_FISbranded/index.htm" height="80%" width="99%"  frameborder="0"></iframe>
+	
+    <iframe src="Mobile_Myaccount_FISbranded/index.htm" height="80%" width="99%"  frameborder="0" id='iframe'></iframe>
     </body>
 </html>
